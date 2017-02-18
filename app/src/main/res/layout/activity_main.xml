@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_vertical_margin"
+    tools:context="edu.csulb.android.tacopronto.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearImage"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:id="@+id/imageView"
+            android:src="@drawable/tacos"
+            android:layout_height="60dp" />
+        <LinearLayout
+            android:layout_height="60dp"
+            android:id="@+id/linearAddress"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_weight="0.5">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/applicationName"
+                android:text="@string/app_name"
+                android:layout_weight="0.5"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/address"
+                android:text="@string/app_address" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/phone"
+                android:text="@string/phone" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/linearSizeTortilla"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linearImage"
+        android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearSizeTortilla1"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    <TextView
+        android:text="Size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewSize"
+        android:textColor="#fff"
+        android:layout_marginRight="5dp"
+        android:background="#019F90"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupSize">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioLarge"
+            android:text="@string/large"
+            android:buttonTint="#019F90"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioMedium"
+            android:buttonTint="#019F90"
+            android:text="@string/medium"/>
+    </RadioGroup>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearSizeTortilla2"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    <TextView
+        android:text="Tortilla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewTortilla"
+        android:layout_marginLeft="5dp"
+        android:textColor="#fff"
+        android:background="#019F90"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupTortilla">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioCorn"
+            android:text="Corn"
+            android:buttonTint="#019F90"
+            android:checked="true"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioFlour"
+            android:buttonTint="#019F90"
+            android:text="Flour"/>
+    </RadioGroup>
+    </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:text="Fillings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/textViewFilling"
+        android:textColor="#fff"
+        android:background="#019F90"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:layout_below="@+id/linearSizeTortilla"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentStart="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearFillings"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textViewFilling"
+        android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearFR1"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    <!--Col 1-->
+    <CheckBox
+        android:text="@string/beef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewFilling"
+        android:layout_alignParentStart="true"
+        android:buttonTint="#019F90"
+        android:id="@+id/checkBeef" />
+    <CheckBox
+        android:text="@string/chicken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBeef"
+        android:layout_alignParentStart="true"
+        android:buttonTint="#019F90"
+        android:id="@+id/checkChicken" />
+
+        <CheckBox
+            android:text="@string/whitefish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/checkChicken"
+            android:layout_alignParentStart="true"
+            android:buttonTint="#019F90"
+            android:id="@+id/checkWhiteFish" />
+
+        <CheckBox
+            android:text="@string/cheese"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkCheese"
+            android:buttonTint="#019F90"
+            android:layout_below="@+id/checkWhiteFish"
+            android:layout_alignParentStart="true"/>
+        <CheckBox
+            android:text="@string/seafood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkSeafood"
+            android:buttonTint="#019F90"
+            android:layout_below="@+id/checkCheese"
+            android:layout_alignParentStart="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearFR2"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    <CheckBox
+        android:text="@string/rice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkRice"
+        android:layout_alignEnd="@+id/textViewTortilla"
+        android:layout_marginEnd="23dp"
+        android:buttonTint="#019F90"
+        android:layout_below="@+id/textViewFilling"
+        android:layout_alignStart="@+id/radioGroupTortilla" />
+    <!--Row 2-->
+
+
+    <CheckBox
+        android:text="@string/beans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkBeans"
+        android:buttonTint="#019F90"
+        android:layout_alignEnd="@+id/textViewTortilla"
+        android:layout_alignStart="@+id/radioGroupTortilla"
+        android:layout_below="@+id/checkRice" />
+
+    <!--Row 3-->
+
+
+    <CheckBox
+        android:text="@string/gallo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkGallo"
+        android:layout_below="@+id/checkBeans"
+        android:buttonTint="#019F90"
+        android:layout_alignEnd="@+id/textViewTortilla"
+        android:layout_alignStart="@+id/radioGroupTortilla" />
+
+    <!--Row 4-->
+
+
+    <CheckBox
+        android:text="@string/guacamole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkGuacamole"
+        android:layout_below="@+id/checkGallo"
+        android:buttonTint="#019F90"
+        android:layout_alignEnd="@+id/textViewTortilla"
+        android:layout_alignStart="@+id/radioGroupTortilla" />
+
+    <!--Row 5-->
+
+        <CheckBox
+            android:text="@string/lbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkLbt"
+            android:buttonTint="#019F90"
+            android:layout_below="@+id/checkGuacamole"
+            android:layout_alignEnd="@+id/textViewTortilla"
+            android:layout_alignStart="@+id/radioGroupTortilla" />
+</LinearLayout>
+
+</LinearLayout>
+
+    <TextView
+        android:text="@string/beverage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/textViewBeverage"
+        android:textColor="#fff"
+        android:background="#019F90"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:layout_below="@+id/linearFillings"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentStart="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearBeverages"
+        android:orientation="horizontal"
+        android:layout_below="@+id/textViewBeverage"
+        android:weightSum="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearBR1"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    <!--Row 1-->
+    <CheckBox
+        android:text="@string/soda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewBeverage"
+        android:buttonTint="#019F90"
+        android:id="@+id/checkSoda" />
+
+    <CheckBox
+        android:text="@string/margarita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkMargarita"
+        android:layout_alignEnd="@+id/textViewTortilla"
+        android:layout_alignStart="@+id/radioGroupTortilla"
+        android:layout_marginEnd="23dp"
+        android:buttonTint="#019F90"
+        android:layout_below="@+id/textViewBeverage" />
+        </LinearLayout>
+    <!--Row 2-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearBR2"
+        android:layout_weight="0.5"
+        android:orientation="vertical">
+    <CheckBox
+        android:text="@string/cerveza"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkSoda"
+        android:layout_alignParentStart="true"
+        android:buttonTint="#019F90"
+        android:id="@+id/checkCerveza" />
+
+    <CheckBox
+        android:text="@string/tequila"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/checkTequila"
+        android:layout_alignEnd="@+id/textViewTortilla"
+        android:layout_alignStart="@+id/radioGroupTortilla"
+        android:layout_marginEnd="23dp"
+        android:buttonTint="#019F90"
+        android:layout_below="@+id/checkMargarita" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/buttonPlaceOrder"
+        android:layout_below="@+id/linearBeverages"
+        android:text="@string/place_order"
+        android:textColor="#fff"
+        android:background="#019F90"
+        android:fontFamily="sans-serif"
+        android:textSize="14sp"
+        android:padding="10dp"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>
+</ScrollView>

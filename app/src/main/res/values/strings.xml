@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Taco Pronto</string>
+    <string name="app_address">123, Euclid Ave</string>
+    <string name="phone">(562) 850-7084</string>
+    <string name="size">Size</string>
+    <string name="medium">Medium</string>
+    <string name="large">Large</string>
+    <string name="tortilla">Tortillas</string>
+    <string name="corn">Corn</string>
+    <string name="flour">Flour</string>
+    <string name="rice">Rice</string>
+    <string name="beef">Beef</string>
+    <string name="chicken">Chicken</string>
+    <string name="beans">Beans</string>
+    <string name="whitefish">White Fish</string>
+    <string name="gallo">Pico de Gallo</string>
+    <string name="cheese">Cheese</string>
+    <string name="guacamole">Guacamole</string>
+    <string name="seafood">Sea Food</string>
+    <string name="lbt">LBT</string>
+    <string name="beverage">Beverages</string>
+    <string name="soda">Soda</string>
+    <string name="margarita">Margarita</string>
+    <string name="cerveza">Cerveza</string>
+    <string name="tequila">Tequila</string>
+    <string name="place_order">Place Order</string>
+</resources>
